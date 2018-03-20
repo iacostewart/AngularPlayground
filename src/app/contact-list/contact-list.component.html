@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <mat-toolbar class="toolbar">
+      <mat-card-title>Contact List</mat-card-title>
+      <span class="toobar-spacer"></span>
+      <mat-icon (click)="addContact()">add</mat-icon>
+    </mat-toolbar> 
+  </mat-card-header>
+<mat-card-content>
+  <div class="contianer">
+    <table class="table">
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Contact number</th>
+        <th>Email</th>
+      </thead>
+        <tr *ngFor="let Contact of ContactList"></tr>
+        <td>{{Contact.FirstName}}</td>
+        <td>{{Contact.LastName}}</td>
+        <td>{{Contact.Contact}}</td>
+        <td>{{Contact.Email}}</td>
+
+      </table>
+  </div>
+</mat-card-content>
+</mat-card>
